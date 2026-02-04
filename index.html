@@ -46,4 +46,32 @@
             </div>
         </div>
     </body>
+    <script>
+        $(function () {
+            $('#btn1').on('mouseover', function () {
+                $('#panel1 .panel-body').fadeOut(1000);
+            });
+            $('#btn2').on('mouseover', function () {
+                $('#panel2').fadeOut(1000);
+            });
+            $('#btn3').on('mouseover', function () {
+                $('#panel3').fadeOut(1000);
+            });
+            $('#btn4').on('mouseover', function () {
+                $('#panel4').fadeOut(1000);
+            });
+            $('#btn1').on('click', function () {
+                $('#panel1 .panel-body').fadeIn(1000);
+            });
+            $('#btn2').on('click', function () {
+                $('#panel2').fadeIn(1000);
+            });
+            $('#btn3').on('click', function () {
+                $('#panel3').fadeIn(1000);
+            });
+            $('#btn4').on('click', function () {
+                $('#panel4').fadeIn(1000);
+            });
+        });
+    </script>
 </html>
