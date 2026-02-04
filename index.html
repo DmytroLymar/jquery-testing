@@ -9,100 +9,21 @@
     </head>
     <body>
         <div class="container">
-            <div class="tab-panels">
-                <ul class="tabs">
-                    <li rel="panel1" class="tab active">panel1</li>
-                    <li rel="panel2" class="tab">panel2</li>
-                    <li rel="panel3" class="tab">panel3</li>
-                    <li rel="panel4" class="tab">panel4</li>
-                </ul>
-                <div id="panel1" class="panel active">
-                    content1<br />
-                    content1<br />
-                    content1<br />
-                    content1<br />
-                    content1<br />
-                </div>
-                <div id="panel2" class="panel">
-                    content2<br />
-                    content2<br />
-                    content2<br />
-                    content2<br />
-                    content2<br />
-                </div>
-                <div id="panel3" class="panel">
-                    content3<br />
-                    content3<br />
-                    content3<br />
-                    content3<br />
-                    content3<br />
-                </div>
-                <div id="panel4" class="panel">
-                    content4<br />
-                    content4<br />
-                    content4<br />
-                    content4<br />
-                    content4<br />
-                </div>
+            <div class="header">
+                <h1 class="text-muted">jQuery Basic Slider</h1>
             </div>
-        </div>
 
-        <div class="tab-panels">
-                <ul class="tabs">
-                    <li rel="panel5" class="tab active">panel5</li>
-                    <li rel="panel6" class="tab">panel6</li>
-                    <li rel="panel7" class="tab">panel7</li>
-                    <li rel="panel8" class="tab">panel8</li>
+            <div id="slider">
+                <ul class="slides">
+                    <li class="slide slide1">slide1</li>
+                    <li class="slide slide2">slide2</li>
+                    <li class="slide slide3">slide3</li>
+                    <li class="slide slide4">slide4</li>
+                    <li class="slide slide5">slide5</li>
+                    <li class="slide slide1">slide1</li>
                 </ul>
-                <div id="panel5" class="panel active">
-                    content1<br />
-                    content1<br />
-                    content1<br />
-                    content1<br />
-                    content1<br />
-                </div>
-                <div id="panel6" class="panel">
-                    content2<br />
-                    content2<br />
-                    content2<br />
-                    content2<br />
-                    content2<br />
-                </div>
-                <div id="panel7" class="panel">
-                    content3<br />
-                    content3<br />
-                    content3<br />
-                    content3<br />
-                    content3<br />
-                </div>
-                <div id="panel8" class="panel">
-                    content4<br />
-                    content4<br />
-                    content4<br />
-                    content4<br />
-                    content4<br />
-                </div>
             </div>
         </div>
     </body>
-    <script>
-        $(function () {
-            $('.tab-panels .tabs li').on('click', function () {
-                var $panel = $(this).closest('.tab-panels');
-                $panel.find('.tabs .tab.active').removeClass('active');
-                $(this).addClass('active');
-                var panelToShow = $(this).attr('rel');
-
-                $panel.find('.panel.active').slideUp(300, showNextPanel);
-
-                function showNextPanel() {
-                    $(this).removeClass('active');
-
-                    $('#' + panelToShow).slideDown(300, function () {
-                        $(this).addClass('active');
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </html>
