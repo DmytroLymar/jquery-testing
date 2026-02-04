@@ -44,6 +44,18 @@
                     </div>
                 </div>
             </div>
+            <ul class="list">
+                <li>one</li>
+                <li class="special">two</li>
+                <li>three</li>
+                <li>
+                    <ul class="sublist">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </body>
     <script>
@@ -53,6 +65,16 @@
                 var panelId = $(this).attr('data-panelid');
                 $('#' + panelId).fadeToggle(1000);
                 $('#' + panelId + ' .panel-body').html(content);
+            });
+
+            $('li').on('click', function () {
+                if ($(this).is('.special')) {
+                    alert('special');
+                } else {
+                    alert('not special');
+                }
+                $(this).removeClass('special');
+                $(this).siblings().addClass('special');
             });
         });
     </script>
