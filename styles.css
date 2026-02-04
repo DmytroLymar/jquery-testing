@@ -1,59 +1,37 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+#slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
 }
 
-.buttons {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    background-color: #e9e9e9;
+#slider .slides {
+    display: block;
+    width: 6000px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
 }
 
-.button {
-    height: 40px;
-    width: 100px;
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
 }
 
-.row {
-    display: flex;
-    gap: 20px;
+/* helper css, since we don't have images */
+.slide1 {
+    background: red;
 }
-
-.col-xs-3 {
-    margin-top: 25px;
-    width: 150px;
-    height: 150px;
+.slide2 {
+    background: blue;
 }
-
-.panel {
-    height: 100%;
-    padding: 5px;
-    background-color: #69b3f0;
-    border-radius: 10px;
+.slide3 {
+    background: green;
 }
-
-.panel-heading {
-    height: 20px;
-    color: white;
-    padding-inline: 10px;
-    line-height: 20px;
+.slide4 {
+    background: purple;
 }
-
-.panel-body {
-    width: 100%;
-    height: 120px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-
-    background-color: white;
-    border-radius: 10px;
+.slide5 {
+    background: pink;
 }
