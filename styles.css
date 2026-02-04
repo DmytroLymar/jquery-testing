@@ -5,60 +5,39 @@
     align-items: center;
 }
 
-.buttons {
+.tab-panels {
     width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    background-color: #e9e9e9;
 }
 
-.panel-button {
-    height: 40px;
+.tabs {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+.tab {
     width: 100px;
+    background-color: #e9e9e9;
+    margin: 0;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
 }
-
-.row {
-    display: flex;
-    gap: 20px;
+.tab:hover {
+    background-color: #cccccc;
+    cursor: pointer;
 }
-
-.col-xs-3 {
-    margin-top: 25px;
-    width: 150px;
-    height: 150px;
+.tab.active {
+    background-color: #cccccc;
 }
 
 .panel {
-    height: 100%;
+    display: none;
     padding: 5px;
     background-color: #69b3f0;
     border-radius: 10px;
 }
 
-.panel-heading {
-    height: 20px;
-    color: white;
-    padding-inline: 10px;
-    line-height: 20px;
-}
-
-.panel-body {
-    width: 100%;
-    height: 120px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-
-    background-color: white;
-    border-radius: 10px;
-}
-
-.special {
-    color: blue;
-    background-color: #e9e9e9;
+.panel.active {
+    display: block;
 }
